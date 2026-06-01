@@ -1,4 +1,12 @@
 package ma.project.echallenge.repository;
 
-public class QuestionOptionRepository {
+import ma.project.echallenge.entity.QuestionOption;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+
+@Repository
+public interface QuestionOptionRepository extends JpaRepository<QuestionOption, Long> {
+    List<QuestionOption> findByQuestionId(Long questionId);
+    List<QuestionOption> findByQuestionIdAndIsCorrectTrue(Long questionId);
 }

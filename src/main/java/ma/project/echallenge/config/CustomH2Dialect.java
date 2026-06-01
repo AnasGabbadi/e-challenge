@@ -1,4 +1,11 @@
 package ma.project.echallenge.config;
 
-public class CustomH2Dialect {
+import org.hibernate.dialect.H2Dialect;
+
+public class CustomH2Dialect extends H2Dialect {
+
+    @Override
+    public boolean supportsInsertReturning() {
+        return false;
+    }
 }

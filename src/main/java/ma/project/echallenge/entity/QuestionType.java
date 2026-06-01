@@ -1,4 +1,7 @@
 package ma.project.echallenge.entity;
 
-public class QuestionType {
+public enum QuestionType {
+    SINGLE_CHOICE,
+    MULTIPLE_CHOICE,
+    TRUE_FALSE
 }
